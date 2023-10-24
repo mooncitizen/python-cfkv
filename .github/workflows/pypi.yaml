@@ -34,6 +34,8 @@ jobs:
           pip install build
       - name: Build package
         run: python setup.py sdist
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
       - name: Sign the dists with Sigstore
         uses: sigstore/gh-action-sigstore-python@v1.2.3
         with:
@@ -48,5 +50,3 @@ jobs:
           gh release upload
           'v${{ inputs.version }}' dist/**
           --repo '${{ github.repository }}'
-      - name: Publish package distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
