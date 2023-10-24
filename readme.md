@@ -5,7 +5,7 @@ A simple wrapper to communicate with [Cloudflare KV Store ](https://developers.c
 
 ### Simple Usage
 
-```
+```python
 import datetime
 from cfkv import KVStore
 
