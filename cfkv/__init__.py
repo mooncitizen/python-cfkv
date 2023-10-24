@@ -15,7 +15,7 @@ from datetime import datetime
 
 class KVStore():
 
-    def __init__(self, namespace_id, account_id, api_key):
+    def __init__(self, namespace_id = None, account_id = None, api_key = None):
         
         if not namespace_id:
             namespace_id = os.environ.get('KV_NAMESPACE_ID', None)
