@@ -1,4 +1,4 @@
-from setuptools import setup find_packages
+from setuptools import setup, find_packages
 
 VERSION = '1.0.0'
 AUTHOR = "Paul Gardiner"
@@ -10,11 +10,11 @@ LONG_DESCRIPTION = "A Python wrapper for the Cloudflare KV Cache API that provid
 setup(
     name=APP_NAME,
     version=VERSION,
-    author=AUTHOR
+    author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     license='MIT',
     packages=find_packages(),
-    install_requires=[]
+    install_requires=[],
     keywords=['cloudflare', 'kv', 'cache', 'api', 'cloudflare workers'],
     classifiers= [
         "Development Status :: 3 - Alpha",
