@@ -46,7 +46,7 @@ jobs:
       - name: Upload artifact signatures to GitHub Release
         run: >-
           gh release upload
-          '${{ github.ref_name }}' dist/**
+          'v${{ inputs.version }}' dist/**
           --repo '${{ github.repository }}'
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
