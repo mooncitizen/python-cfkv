@@ -11,6 +11,8 @@ setup(
     name=APP_NAME,
     version=VERSION,
     author=AUTHOR,
+    description=DESCRIPTION,
+    long_description=LONG_DESCRIPTION,
     author_email=AUTHOR_EMAIL,
     license='MIT',
     packages=find_packages(),
