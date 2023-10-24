@@ -43,7 +43,8 @@ You will need to know your namespace id which is generated when you create a KV 
 3. Scroll down to create custom token
 4. Create a token with **Workers KV Storage** and select **Edit**
 
-![Example Token](github/image.png)
+![Example Token](https://raw.githubusercontent.com/mooncitizen/python-cfkv/main/github/image.png)
+
 
 You can use environment variables to store these the following are monitored
 ```python
