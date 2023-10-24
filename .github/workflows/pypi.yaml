@@ -1,6 +1,12 @@
 name: Deploy > PYPI
 
-on: push
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version"
+        required: true
+        default: "0.0.0"
 
 permissions:
   contents: read
@@ -18,9 +24,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Read VERSION file
-        id: getversion
-        run: echo "::set-output name=version::$(cat versionfile)"
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
@@ -39,7 +42,7 @@ jobs:
             ./dist/*.whl
       - name: Create GitHub Release
         run: >-
-          gh release create 'v${{ steps.getversion.outputs.version }}' --notes ""
+          gh release create 'v${{ inputs.version }}' --notes ""
       - name: Upload artifact signatures to GitHub Release
         run: >-
           gh release upload
