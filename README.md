@@ -9,6 +9,7 @@ A simple wrapper to communicate with [Cloudflare KV Store ](https://developers.c
 - [x] Set and Get
 - [ ] Fastapi Middleware
 - [ ] Flask integration
+- [ ] Options to include string instead of dict entry
 
 ### Simple Usage
 
