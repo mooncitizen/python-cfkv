@@ -17,7 +17,6 @@ from cfkv import KVStore
 
 store = KVStore(namespace_id="YOUR_NAMESPACE_ID", account_id="ACCOUNT_ID", api_key="API_KEY")
 
-
 # Usage Example
 key = "sample_key"
 get = store.get(key)
@@ -31,7 +30,4 @@ else:
     data['stored'] = True
 
 print(get)
-
-
-
 ```
