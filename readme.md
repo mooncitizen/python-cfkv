@@ -6,8 +6,8 @@ A simple wrapper to communicate with [Cloudflare KV Store ](https://developers.c
 ### Simple Usage
 
 ```
-import KVStore
 import datetime
+from cfkv import KVStore
 
 store = KVStore(namespace_id="YOUR_NAMESPACE_ID", account_id="ACCOUNT_ID", api_key="API_KEY")
 
