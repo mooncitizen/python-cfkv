@@ -39,7 +39,7 @@ jobs:
             ./dist/*.whl
       - name: Create GitHub Release
         run: >-
-          gh release create 'v${{ steps.getversion.outputs }}' --notes ""
+          gh release create 'v${{ steps.getversion.outputs.version }}' --notes ""
       - name: Upload artifact signatures to GitHub Release
         run: >-
           gh release upload
