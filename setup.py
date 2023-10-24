@@ -1,18 +1,22 @@
 from setuptools import setup, find_packages
+from pathlib import Path
+
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
 
 VERSION = '1.0.0'
 AUTHOR = "Paul Gardiner"
 AUTHOR_EMAIL = "franticstone@gmail.com"
 APP_NAME = "cfkv"
 DESCRIPTION = "A Python wrapper for the Cloudflare KV Cache API"
-LONG_DESCRIPTION = "A Python wrapper for the Cloudflare KV Cache API that provides a simple interface to the Cloudflare KV Cache."
 
 setup(
     name=APP_NAME,
     version=VERSION,
     author=AUTHOR,
     description=DESCRIPTION,
-    long_description=LONG_DESCRIPTION,
+    long_description=long_description,
+    long_description_content_type='text/markdown'
     author_email=AUTHOR_EMAIL,
     license='MIT',
     packages=find_packages(),

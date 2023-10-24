@@ -1,5 +1,7 @@
 # CFKV
 
+[![Deploy > PYPI > Test ](https://github.com/mooncitizen/python-cfkv/actions/workflows/testpypi.yaml/badge.svg)](https://github.com/mooncitizen/python-cfkv/actions/workflows/testpypi.yaml)
+
 A simple wrapper to communicate with [Cloudflare KV Store ](https://developers.cloudflare.com/kv/). It can be used as a cache and features will be implemented to be used in frameworks such as ```FastAPI```
 
 
