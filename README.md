@@ -8,6 +8,7 @@ A simple wrapper to communicate with [Cloudflare KV Store ](https://developers.c
 
 - [x] Set and Get
 - [ ] Fastapi Middleware
+- [ ] Flask integration
 
 ### Simple Usage
 
