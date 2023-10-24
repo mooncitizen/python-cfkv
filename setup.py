@@ -4,11 +4,11 @@ from pathlib import Path
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
-VERSION = '1.1.1'
+VERSION = '1.1.2'
 AUTHOR = "Paul Gardiner"
 AUTHOR_EMAIL = "franticstone@gmail.com"
 APP_NAME = "cfkv"
-DESCRIPTION = "A Python wrapper for the Cloudflare KV Cache API"
+DESCRIPTION = "A Python wrapper for the Cloudflare KV Store API"
 
 setup(
     name=APP_NAME,
