@@ -27,7 +27,7 @@ jobs:
 
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/<package-name>
+      url: https://test.pypi.org/p/CFKV
 
     permissions:
       id-token: write
@@ -43,7 +43,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install build
       - name: Build package
-        run: python setup.py sdist bdist_wheel
+        run: python setup.py sdist
       - name: Publish distribution 📦 to TestPyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
