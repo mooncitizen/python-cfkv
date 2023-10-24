@@ -82,10 +82,13 @@ class KVStore():
                 bool: True if successful, False otherwise
         """
 
+        if isinstance(value, dict):
+            value = json.dumps(value)
+
         if expiresMinutes is not None and expiresMinutes > 0:
             expiresMinutes = int(datetime.now().timestamp()) + (expiresMinutes * 60)
             value = {
-                'value': json.dumps(value),
+                'value': value,
                 'expiration_ttl': expiresMinutes
             }
 
