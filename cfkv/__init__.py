@@ -62,7 +62,7 @@ class KVStore():
         response = requests.request("GET", url, headers=headers)
         js = response.json()
 
-        if js.get('success') is False:
+        if response.status_code != 200:
             return None
         else:
             return js
